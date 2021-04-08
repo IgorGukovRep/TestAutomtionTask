@@ -7,7 +7,7 @@ public abstract class DateOfBirthException extends RuntimeException {
 
     public DateOfBirthException(String message) {
         super(message);
-        log.debug(message);
+        log.error(message);
     }
 
     public DateOfBirthException(String message, Throwable cause) {
