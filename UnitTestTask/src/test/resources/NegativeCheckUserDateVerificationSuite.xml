@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Negative data values verifications" parallel="true">
+
+    <test name="Verify negative data" parallel="methods" thread-count="1">
+        <classes>
+            <class name="first.task.UserDateVerificationServiceTest">
+                <methods>
+                    <include name="checkUserDateVerificationNegativeDataTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
