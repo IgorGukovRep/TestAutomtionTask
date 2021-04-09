@@ -1,13 +1,11 @@
 package core.pages;
 
 import com.codeborne.selenide.Condition;
-import lombok.Getter;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 import static controller.config.DictionaryFileManager.readDataFromJson;
-import static core.pages.ResultPage.ElementTitles.*;
 
 public class ResultPage {
 
@@ -16,25 +14,15 @@ public class ResultPage {
     private final String resultLinkName = "//div[@id='search']//div[@class='g']//h3";
     private final String logoLabel = "//div[@class='logo']";
 
-    public enum ElementTitles {
-
-        SEARCH(readDataFromJson("res_Search")),
-        ALL(readDataFromJson("res_All")),
-        VIDEOS(readDataFromJson("res_Videos")),
-        IMAGES(readDataFromJson("res_Images")),
-        NEWS(readDataFromJson("res_News")),
-        MAPS(readDataFromJson("res_Maps")),
-        MORE(readDataFromJson("res_More")),
-        SETTINGS(readDataFromJson("res_Settings")),
-        TOOLS(readDataFromJson("res_Tools"));
-
-        @Getter
-        private String title;
-
-        ElementTitles(String title) {
-            this.title = title;
-        }
-    }
+    private String SEARCH = readDataFromJson("res_Search");
+    private String ALL = readDataFromJson("res_All");
+    private String VIDEOS = readDataFromJson("res_Videos");
+    private String IMAGES = readDataFromJson("res_Images");
+    private String NEWS = readDataFromJson("res_News");
+    private String MAPS = readDataFromJson("res_Maps");
+    private String MORE = readDataFromJson("res_More");
+    private String SETTINGS = readDataFromJson("res_Settings");
+    private String TOOLS = readDataFromJson("res_Tools");
 
     public MainPage clickLogo() {
         $(By.xpath(logoLabel)).click();
@@ -43,14 +31,14 @@ public class ResultPage {
     }
 
     public void checkResultPageIsLoaded() {
-        $(By.xpath(String.format(menuItemsLocatorsLabels, ALL.getTitle()))).shouldBe(Condition.visible);
-        $(By.xpath(String.format(menuItemsLocatorsLabels, VIDEOS.getTitle()))).shouldBe(Condition.visible);
-        $(By.xpath(String.format(menuItemsLocatorsLabels, IMAGES.getTitle()))).shouldBe(Condition.visible);
-        $(By.xpath(String.format(menuItemsLocatorsLabels, NEWS.getTitle()))).shouldBe(Condition.visible);
-        $(By.xpath(String.format(menuItemsLocatorsLabels, MAPS.getTitle()))).shouldBe(Condition.visible);
-        $(By.xpath(String.format(menuItemsLocatorsLabels, SETTINGS.getTitle()))).shouldBe(Condition.visible);
-        $(By.xpath(String.format(menuItemsLocatorsLabels, MORE.getTitle()))).shouldBe(Condition.visible);
-        $(By.xpath(String.format(toolLocatorLabel, TOOLS.getTitle()))).shouldBe(Condition.visible);
+        $(By.xpath(String.format(menuItemsLocatorsLabels, ALL))).shouldBe(Condition.visible);
+        $(By.xpath(String.format(menuItemsLocatorsLabels, VIDEOS))).shouldBe(Condition.visible);
+        $(By.xpath(String.format(menuItemsLocatorsLabels, IMAGES))).shouldBe(Condition.visible);
+        $(By.xpath(String.format(menuItemsLocatorsLabels, NEWS))).shouldBe(Condition.visible);
+        $(By.xpath(String.format(menuItemsLocatorsLabels, MAPS))).shouldBe(Condition.visible);
+        $(By.xpath(String.format(menuItemsLocatorsLabels, SETTINGS))).shouldBe(Condition.visible);
+        $(By.xpath(String.format(menuItemsLocatorsLabels, MORE))).shouldBe(Condition.visible);
+        $(By.xpath(String.format(toolLocatorLabel, TOOLS))).shouldBe(Condition.visible);
     }
 
     public String getResultLinkName(int lineNumber) {
