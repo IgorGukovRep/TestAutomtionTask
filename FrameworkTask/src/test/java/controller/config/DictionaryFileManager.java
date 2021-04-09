@@ -27,7 +27,7 @@ public class DictionaryFileManager {
     public static String readDataFromJson(String key) {
         String locale = Reporter.getCurrentTestResult().getTestContext()
                 .getCurrentXmlTest().getParameter("locale");
-        if (Objects.isNull(locale) | locale.isEmpty()) {
+        if (Objects.isNull(locale) || locale.isEmpty()) {
             return readData(key, BROWSER_LANGUAGE);
         } else {
             return readData(key, locale);

@@ -49,4 +49,8 @@ public class Logger {
     public void testStartInfo(Class clazz) {
         info(String.format("======= Test '%s' is started =======", clazz.getSimpleName()));
     }
+
+    public void afterInfo(Object message) {
+        info(message.toString());
+    }
 }

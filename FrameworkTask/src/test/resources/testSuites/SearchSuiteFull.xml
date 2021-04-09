@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Test Suite" parallel="false">
+
+    <suite-files>
+        <suite-file path="SearchSuiteDifferentLocalesTest.xml"/>
+        <suite-file path="SearchSuiteNonDefaultBrowsersTest.xml"/>
+    </suite-files>
+
+</suite>

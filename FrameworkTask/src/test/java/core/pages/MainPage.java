@@ -17,31 +17,21 @@ public class MainPage extends BasePage {
 
     public MainPage openMainPage() {
         getDriver().open("/");
+        logger.info("Open main page: https://google.com");
         return this;
     }
 
     public MainPage fillSearchInput(String text) {
         SelenideElement searchInput = $(By.xpath(String.format(searchLocatorInput, SEARCH_TITLE)));
         searchInput.val(text);
+        logger.info(String.format("Input value: %s", text));
         return this;
     }
 
     public ResultPage clickSearchButton() {
         SelenideElement searchButton = $(By.xpath(String.format(searchLocatorButton, SEARCH_BUTTON)));
         searchButton.click();
+        logger.info("Click Search button");
         return new ResultPage();
-    }
-
-
-    public String getHintName() {
-        return null;
-    }
-
-    public void moveMouseOnSearchField() {
-
-    }
-
-    public String getPageTitleFromNavigationBar() {
-        return null;
     }
 }

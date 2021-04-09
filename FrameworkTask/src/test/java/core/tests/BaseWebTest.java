@@ -9,6 +9,7 @@ import org.testng.annotations.Listeners;
 public abstract class BaseWebTest extends BaseTest {
 
     public static WebConfigManager webConfigManager = new WebConfigManager();
+    public static DictionaryFileManager dictionaryFileManager = new DictionaryFileManager();
 
     @Override
     protected void customSetUpEach() {
@@ -16,6 +17,11 @@ public abstract class BaseWebTest extends BaseTest {
 
     @Override
     protected void customTearDown() {
+
+    }
+
+    @Override
+    protected void globalTearDown() {
         DictionaryFileManager.clear();
         logger.info("Clear dictionary file manager!");
     }
