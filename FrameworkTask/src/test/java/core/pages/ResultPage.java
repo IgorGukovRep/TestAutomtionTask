@@ -14,7 +14,6 @@ public class ResultPage extends BasePage {
     private final String resultLinkName = "//div[@id='search']//div[@class='g']//h3";
     private final String logoLabel = "//div[@class='logo']";
 
-    private String search = readDataFromJson("res_Search");
     private String all = readDataFromJson("res_All");
     private String videos = readDataFromJson("res_Videos");
     private String images = readDataFromJson("res_Images");

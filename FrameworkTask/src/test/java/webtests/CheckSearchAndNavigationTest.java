@@ -24,8 +24,8 @@ public class CheckSearchAndNavigationTest extends BaseWebTest {
     public void checkSearchAndNavigationTest(String inputForSearch, String result, int lineNumberResult) {
         mainPage.openMainPage()
                 .fillSearchInput(inputForSearch)
-                .clickSearchButton();
-        resultPage.checkResultPageIsLoaded();
+                .clickSearchButton()
+                .checkResultPageIsLoaded();
         Assert.assertEquals(resultPage.getResultLinkName(lineNumberResult), result,
                 "First link contains other result:" + resultPage.getResultLinkName(lineNumberResult));
         resultPage.clickLogo();

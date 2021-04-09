@@ -1,6 +1,5 @@
 package core.pages;
 
-import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
@@ -22,15 +21,13 @@ public class MainPage extends BasePage {
     }
 
     public MainPage fillSearchInput(String text) {
-        SelenideElement searchInput = $(By.xpath(String.format(searchLocatorInput, search_title)));
-        searchInput.val(text);
+        $(By.xpath(String.format(searchLocatorInput, search_title))).val(text);
         logger.info(String.format("Input value: %s", text));
         return this;
     }
 
     public ResultPage clickSearchButton() {
-        SelenideElement searchButton = $(By.xpath(String.format(searchLocatorButton, search_button)));
-        searchButton.click();
+        $(By.xpath(String.format(searchLocatorButton, search_button))).click();
         logger.info("Click Search button");
         return new ResultPage();
     }
