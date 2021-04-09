@@ -1,0 +1,53 @@
+[
+  {
+    "key": "res_Search",
+    "ru": "Поиск",
+    "en-GB": "Search"
+  },
+  {
+    "key": "res_Search_In_Google",
+    "ru": "Поиск в Google",
+    "en-GB": "Google Search"
+  },
+  {
+    "key": "res_All",
+    "ru": "Все",
+    "en-GB": "All"
+  },
+  {
+    "key": "res_Videos",
+    "ru": "Видео",
+    "en-GB": "Videos"
+  },
+  {
+    "key": "res_Images",
+    "ru": "Картинки",
+    "en-GB": "Images"
+  },
+  {
+    "key": "res_News",
+    "ru": "Новости",
+    "en-GB": "News"
+  },
+  {
+    "key": "res_Maps",
+    "ru": "Карты",
+    "en-GB": "Maps"
+  },
+
+  {
+    "key": "res_More",
+    "ru": "Ещё",
+    "en-GB": "Videos"
+  },
+  {
+    "key": "res_Settings",
+    "ru": "Настройки",
+    "en-GB": "Settings"
+  },
+  {
+    "key": "res_Tools",
+    "ru": "Инструменты",
+    "en-GB": "Tools"
+  }
+]
