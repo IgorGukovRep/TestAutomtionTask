@@ -14,15 +14,15 @@ public class ResultPage extends BasePage {
     private final String resultLinkName = "//div[@id='search']//div[@class='g']//h3";
     private final String logoLabel = "//div[@class='logo']";
 
-    private String SEARCH = readDataFromJson("res_Search");
-    private String ALL = readDataFromJson("res_All");
-    private String VIDEOS = readDataFromJson("res_Videos");
-    private String IMAGES = readDataFromJson("res_Images");
-    private String NEWS = readDataFromJson("res_News");
-    private String MAPS = readDataFromJson("res_Maps");
-    private String MORE = readDataFromJson("res_More");
-    private String SETTINGS = readDataFromJson("res_Settings");
-    private String TOOLS = readDataFromJson("res_Tools");
+    private String search = readDataFromJson("res_Search");
+    private String all = readDataFromJson("res_All");
+    private String videos = readDataFromJson("res_Videos");
+    private String images = readDataFromJson("res_Images");
+    private String news = readDataFromJson("res_News");
+    private String maps = readDataFromJson("res_Maps");
+    private String more = readDataFromJson("res_More");
+    private String settings = readDataFromJson("res_Settings");
+    private String tools = readDataFromJson("res_Tools");
 
     public MainPage clickLogo() {
         $(By.xpath(logoLabel)).click();
@@ -33,15 +33,15 @@ public class ResultPage extends BasePage {
 
     public void checkResultPageIsLoaded() {
         logger.debug(String.format("Startin to check: %s, %s, %s, %s, %s, %s, %s, %s",
-                ALL, VIDEOS, IMAGES, NEWS, MAPS, SETTINGS, MORE, TOOLS));
-        $(By.xpath(String.format(menuItemsLocatorsLinks, ALL))).shouldBe(Condition.visible);
-        $(By.xpath(String.format(menuItemsLocatorsLinks, VIDEOS))).shouldBe(Condition.visible);
-        $(By.xpath(String.format(menuItemsLocatorsLinks, IMAGES))).shouldBe(Condition.visible);
-        $(By.xpath(String.format(menuItemsLocatorsLinks, NEWS))).shouldBe(Condition.visible);
-        $(By.xpath(String.format(menuItemsLocatorsLinks, MAPS))).shouldBe(Condition.visible);
-        $(By.xpath(String.format(menuItemsLocatorsLinks, SETTINGS))).shouldBe(Condition.visible);
-        $(By.xpath(String.format(menuItemsLocatorsLinks, MORE))).shouldBe(Condition.visible);
-        $(By.xpath(String.format(toolLocatorLabel, TOOLS))).shouldBe(Condition.visible);
+                all, videos, images, news, maps, settings, more, tools));
+        $(By.xpath(String.format(menuItemsLocatorsLinks, all))).shouldBe(Condition.visible);
+        $(By.xpath(String.format(menuItemsLocatorsLinks, videos))).shouldBe(Condition.visible);
+        $(By.xpath(String.format(menuItemsLocatorsLinks, images))).shouldBe(Condition.visible);
+        $(By.xpath(String.format(menuItemsLocatorsLinks, news))).shouldBe(Condition.visible);
+        $(By.xpath(String.format(menuItemsLocatorsLinks, maps))).shouldBe(Condition.visible);
+        $(By.xpath(String.format(menuItemsLocatorsLinks, settings))).shouldBe(Condition.visible);
+        $(By.xpath(String.format(menuItemsLocatorsLinks, more))).shouldBe(Condition.visible);
+        $(By.xpath(String.format(toolLocatorLabel, tools))).shouldBe(Condition.visible);
         logger.debug("All elements have been  checked");
     }
 
