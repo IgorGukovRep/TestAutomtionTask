@@ -22,13 +22,24 @@ public class CheckSearchAndNavigationTest extends BaseWebTest {
     @Test(description = "Enter Full name and check Results page.")
     @Parameters({"inputForSearch", "result", "lineNumberResult"})
     public void checkSearchAndNavigationTest(String inputForSearch, String result, int lineNumberResult) {
-        mainPage.openMainPage()
-                .fillSearchInput(inputForSearch)
-                .clickSearchButton()
-                .checkResultPageIsLoaded();
+        mainPage.openMainPage();
+        mainPage.fillSearchInput(inputForSearch);
+        mainPage.clickSearchButton();
+        resultPage.checkResultPageIsLoaded();
         Assert.assertEquals(resultPage.getResultLinkName(lineNumberResult), result,
                 "First link contains other result:" + resultPage.getResultLinkName(lineNumberResult));
         resultPage.clickLogo();
         Assert.assertTrue(resultPage.isResultLinksDisappeared(), "Result links still exists.");
     }
+
+    //  @Test(description = "Enter Full name and check Results page. Check Parallel")
+    //  @Parameters({"inputForSearch", "result", "lineNumberResult"})
+    //  public void checkSearchAndNavigationTest_2(String inputForSearch, String result, int lineNumberResult) {
+    //      mainPage.openMainPage();
+    //      mainPage.fillSearchInput(inputForSearch);
+    //      mainPage.clickSearchButton();
+    //      resultPage.checkResultPageIsLoaded();
+    //      Assert.assertEquals(resultPage.getResultLinkName(lineNumberResult), result,
+    //              "First link contains other result:" + resultPage.getResultLinkName(lineNumberResult));
+    //  }
 }

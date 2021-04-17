@@ -1,9 +1,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Suite to check params for different locales" parallel="methods" thread-count="1">
+<suite name="Suite to check params for different locales" parallel="tests" thread-count="2">
 
 
-    <test name="verify for Ru-locale" parallel="methods" thread-count="1">
+    <test name="verify for Ru-locale">
         <parameter name="browserName" value="chrome"/>
         <parameter name="locale" value="ru"/>
         <parameter name="inputForSearch" value="Александр Сергеевич Пушкин"/>
@@ -15,7 +15,7 @@
     </test>
 
 
-    <test name="verify for En-locale" parallel="methods" thread-count="1">
+    <test name="verify for En-locale">
         <parameter name="browserName" value="chrome"/>
         <parameter name="locale" value="en-GB"/>
         <parameter name="inputForSearch" value="Александр Сергеевич Пушкин"/>

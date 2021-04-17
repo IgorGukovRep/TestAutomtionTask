@@ -14,21 +14,18 @@ public class MainPage extends BasePage {
     private String search_button = readDataFromJson("res_Search_In_Google");
 
 
-    public MainPage openMainPage() {
+    public void openMainPage() {
         getDriver().open("/");
         logger.info("Open main page: https://google.com");
-        return this;
     }
 
-    public MainPage fillSearchInput(String text) {
+    public void fillSearchInput(String text) {
         $(By.xpath(String.format(searchLocatorInput, search_title))).val(text);
         logger.info(String.format("Input value: %s", text));
-        return this;
     }
 
-    public ResultPage clickSearchButton() {
+    public void clickSearchButton() {
         $(By.xpath(String.format(searchLocatorButton, search_button))).click();
         logger.info("Click Search button");
-        return new ResultPage();
     }
 }

@@ -1,7 +1,7 @@
 package utils;
 
 import org.openqa.selenium.logging.LogType;
-import utils.browserConstants.IncludingWarnings;
+import utils.constants.browserConstants.IncludingWarnings;
 
 import java.util.ArrayList;
 import java.util.Arrays;

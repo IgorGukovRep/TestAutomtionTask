@@ -1,4 +1,4 @@
-package utils.browserConstants;
+package utils.constants.browserConstants;
 
 public enum IncludingWarnings {
 

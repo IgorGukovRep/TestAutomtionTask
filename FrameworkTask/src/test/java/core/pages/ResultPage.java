@@ -23,11 +23,10 @@ public class ResultPage extends BasePage {
     private String settings = readDataFromJson("res_Settings");
     private String tools = readDataFromJson("res_Tools");
 
-    public MainPage clickLogo() {
+    public void clickLogo() {
         $(By.xpath(logoLabel)).click();
         $(By.xpath(logoLabel)).shouldBe(Condition.disappear);
-        logger.info("Click on Google lol");
-        return new MainPage();
+        logger.info("Click on Google logo");
     }
 
     public void checkResultPageIsLoaded() {
